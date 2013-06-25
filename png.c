@@ -719,7 +719,6 @@ png_convert_to_rfc1123(png_structp png_ptr, png_timep ptime)
 png_charp PNGAPI
 png_get_copyright(png_structp png_ptr)
 {
-   png_ptr = png_ptr;  /* Silence compiler warning about unused png_ptr */
 #ifdef PNG_STRING_COPYRIGHT
       return PNG_STRING_COPYRIGHT
 #else
@@ -737,6 +736,9 @@ png_get_copyright(png_structp png_ptr)
       Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.");
 #endif
 #endif
+   /* quiet compiler warnings */
+   if(png_ptr)
+        return;
 }
 
 /* The following return the library version as a short string in the
@@ -751,23 +753,28 @@ png_charp PNGAPI
 png_get_libpng_ver(png_structp png_ptr)
 {
    /* Version of *.c files used when building libpng */
-   png_ptr = png_ptr;  /* Silence compiler warning about unused png_ptr */
    return ((png_charp) PNG_LIBPNG_VER_STRING);
+
+   /* quiet compiler warnings */
+   if(png_ptr)
+        return;
 }
 
 png_charp PNGAPI
 png_get_header_ver(png_structp png_ptr)
 {
    /* Version of *.h files used when building libpng */
-   png_ptr = png_ptr;  /* Silence compiler warning about unused png_ptr */
    return ((png_charp) PNG_LIBPNG_VER_STRING);
+
+   /* quiet compiler warnings */
+   if(png_ptr)
+        return;
 }
 
 png_charp PNGAPI
 png_get_header_version(png_structp png_ptr)
 {
    /* Returns longer string containing both version and date */
-   png_ptr = png_ptr;  /* Silence compiler warning about unused png_ptr */
 #ifdef __STDC__
    return ((png_charp) PNG_HEADER_VERSION_STRING
 #ifndef PNG_READ_SUPPORTED
@@ -777,6 +784,10 @@ png_get_header_version(png_structp png_ptr)
 #else
    return ((png_charp) PNG_HEADER_VERSION_STRING);
 #endif
+
+   /* quiet compiler warnings */
+   if(png_ptr)
+        return;
 }
 
 #if defined(PNG_READ_SUPPORTED) || defined(PNG_WRITE_SUPPORTED)
