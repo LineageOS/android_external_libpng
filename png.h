@@ -2781,10 +2781,10 @@ extern PNG_EXPORT(void, png_write_png) PNGARG((png_structp png_ptr,
 #define png_debug2(l, m, p1, p2)
 #endif
 
-extern PNG_EXPORT(png_charp,png_get_copyright) PNGARG((png_structp png_ptr));
-extern PNG_EXPORT(png_charp,png_get_header_ver) PNGARG((png_structp png_ptr));
-extern PNG_EXPORT(png_charp,png_get_header_version) PNGARG((png_structp png_ptr));
-extern PNG_EXPORT(png_charp,png_get_libpng_ver) PNGARG((png_structp png_ptr));
+extern PNG_EXPORT(png_charp,png_get_copyright) PNGARG((void));
+extern PNG_EXPORT(png_charp,png_get_header_ver) PNGARG((void));
+extern PNG_EXPORT(png_charp,png_get_header_version) PNGARG((void));
+extern PNG_EXPORT(png_charp,png_get_libpng_ver) PNGARG((void));
 
 #ifdef PNG_MNG_FEATURES_SUPPORTED
 extern PNG_EXPORT(png_uint_32,png_permit_mng_features) PNGARG((png_structp
@@ -2830,11 +2830,11 @@ extern PNG_EXPORT(png_uint_32,png_permit_mng_features) PNGARG((png_structp
 #ifndef PNG_1_0_X
 /* pngget.c */
 extern PNG_EXPORT(png_uint_32,png_get_mmx_flagmask)
-   PNGARG((int flag_select, int *compilerID));
+   PNGARG((int *compilerID));
 
 /* pngget.c */
 extern PNG_EXPORT(png_uint_32,png_get_asm_flagmask)
-   PNGARG((int flag_select));
+   PNGARG((void));
 
 /* pngget.c */
 extern PNG_EXPORT(png_uint_32,png_get_asm_flags)
