@@ -26,8 +26,7 @@ png_default_error PNGARG((png_structp png_ptr,
   png_const_charp error_message)) PNG_NORETURN;
 #ifdef PNG_WARNINGS_SUPPORTED
 static void /* PRIVATE */
-png_default_warning PNGARG((png_structp png_ptr,
-  png_const_charp warning_message));
+png_default_warning PNGARG((png_const_charp warning_message));
 #endif /* PNG_WARNINGS_SUPPORTED */
 
 /* This function is called whenever there is a fatal error.  This function
@@ -129,7 +128,7 @@ png_warning(png_structp png_ptr, png_const_charp warning_message)
    if (png_ptr != NULL && png_ptr->warning_fn != NULL)
       (*(png_ptr->warning_fn))(png_ptr, warning_message + offset);
    else
-      png_default_warning(png_ptr, warning_message + offset);
+      png_default_warning(warning_message + offset);
 }
 #endif /* PNG_WARNINGS_SUPPORTED */
 
@@ -311,7 +310,7 @@ png_default_error(png_structp png_ptr, png_const_charp error_message)
  * not used, but it is passed in case it may be useful.
  */
 static void /* PRIVATE */
-png_default_warning(png_structp png_ptr, png_const_charp warning_message)
+png_default_warning(png_const_charp warning_message)
 {
 #ifdef PNG_CONSOLE_IO_SUPPORTED
 #  ifdef PNG_ERROR_NUMBERS_SUPPORTED
@@ -348,7 +347,6 @@ png_default_warning(png_structp png_ptr, png_const_charp warning_message)
 #else
    warning_message = warning_message; /* Make compiler happy */
 #endif
-   png_ptr = png_ptr; /* Make compiler happy */
 }
 #endif /* PNG_WARNINGS_SUPPORTED */
 
