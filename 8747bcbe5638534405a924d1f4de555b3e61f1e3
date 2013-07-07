@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_87794532",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3304
+      },
+      "writtenOn": "2013-07-07T23:41:26Z",
+      "side": 1,
+      "message": "you may want to add a empty line after the first line as is custom with git commit messages.",
+      "revId": "8747bcbe5638534405a924d1f4de555b3e61f1e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
