@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7af24918_3b7c0572",
+        "filename": "Makefile.in",
+        "patchSetId": 1
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2014-04-23T08:11:56Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "f8479818f50f2c386b054a0cea00ccd19788cf98",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7af24918_1b81494b",
+        "filename": "Makefile.in",
+        "patchSetId": 1
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2014-04-23T08:11:56Z",
+      "side": 1,
+      "message": "tabs?",
+      "revId": "f8479818f50f2c386b054a0cea00ccd19788cf98",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7af24918_7b968d95",
+        "filename": "aclocal.m4",
+        "patchSetId": 1
+      },
+      "lineNbr": 1213,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2014-04-23T08:11:56Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "f8479818f50f2c386b054a0cea00ccd19788cf98",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7af24918_5b93d1a3",
+        "filename": "compile",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2014-04-23T08:11:56Z",
+      "side": 1,
+      "message": "tabs?",
+      "revId": "f8479818f50f2c386b054a0cea00ccd19788cf98",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
