@@ -24,7 +24,8 @@ ifeq ($(ARCH_ARM_HAVE_NEON),true)
 #	LOCAL_CFLAGS += -DPNG_ARM_NEON_OPT
 	common_SRC_FILES += \
 		arm/arm_init.c \
-		arm/filter_neon.S
+		arm/filter_neon.S \
+		arm/filter_neon_intrinsics.c
 else
 	common_SRC_FILES := aoeusnth3.c
 endif
