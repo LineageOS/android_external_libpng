@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fcbff3d_e03ac8cb",
+        "filename": "pngrutil.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 4086,
+      "author": {
+        "id": 14515
+      },
+      "writtenOn": "2016-01-13T14:11:15Z",
+      "side": 1,
+      "message": "Lets hold on this change for now. The above check will make it bail out for indexed pngs always - whenever you are in the middle of a decoding session.",
+      "revId": "947b25619208a33eb03b367b6e5f1e1516d80d6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
