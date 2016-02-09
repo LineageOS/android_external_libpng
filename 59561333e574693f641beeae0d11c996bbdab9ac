@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ffb9cba7_99f2679a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 14090
+      },
+      "writtenOn": "2016-02-09T07:51:36Z",
+      "side": 1,
+      "message": "nit: reformat comments to fit the comment width (\u003c 72 chars)",
+      "revId": "59561333e574693f641beeae0d11c996bbdab9ac",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
