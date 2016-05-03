@@ -1,0 +1,30 @@
+--- pngrutil.c
++++ pngrutil.c
+@@ -4491,16 +5613,21 @@ png_read_start_row(png_structp png_ptr)
+ 
+ #if defined(PNG_READ_USER_TRANSFORM_SUPPORTED) && \
+ defined(PNG_USER_TRANSFORM_PTR_SUPPORTED)
+-   if (png_ptr->transformations & PNG_USER_TRANSFORM)
+-     {
+-       int user_pixel_depth = png_ptr->user_transform_depth*
++   if ((png_ptr->transformations & PNG_USER_TRANSFORM) != 0)
++   {
++      int user_pixel_depth = png_ptr->user_transform_depth *
+          png_ptr->user_transform_channels;
+-       if (user_pixel_depth > max_pixel_depth)
+-         max_pixel_depth=user_pixel_depth;
+-     }
++
++      if (user_pixel_depth > max_pixel_depth)
++         max_pixel_depth = user_pixel_depth;
++   }
+ #endif
+ 
++   /* This value is stored in png_struct and double checked in the row read
++    * code.
++    */
+    png_ptr->maximum_pixel_depth = (png_byte)max_pixel_depth;
++   png_ptr->transformed_pixel_depth = 0; /* calculated on demand */
+ 
+    /* Align the width on the next larger 8 pixels.  Mainly used
+     * for interlacing
