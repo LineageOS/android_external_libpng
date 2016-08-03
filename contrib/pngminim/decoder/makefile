@@ -7,7 +7,7 @@ LD=$(CC)
 
 RM=rm -f
 
-CFLAGS=-DPNG_USER_CONFIG -DNO_GZCOMPRESS -DNO_GZIP -DZ_SOLO \
+CFLAGS=-DPNG_USER_CONFIG -DNO_GZCOMPRESS -DNO_GZIP \
        -DdeflateParams\(a,b,c\)=Z_OK -I. -O1
 
 C=.c
