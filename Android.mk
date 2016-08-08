@@ -20,17 +20,6 @@ common_SRC_FILES := \
 	pngwtran.c \
 	pngwutil.c \
 
-ifeq ($(ARCH_ARM_HAVE_NEON),true)
-#	LOCAL_CFLAGS += -DPNG_ARM_NEON_OPT
-	common_SRC_FILES += \
-		arm/arm_init.c \
-		arm/filter_neon.S \
-		arm/filter_neon_intrinsics.c
-else
-	common_SRC_FILES := aoeusnth3.c
-endif
-
-
 common_CFLAGS := -std=gnu89 #-fvisibility=hidden ## -fomit-frame-pointer
 
 ifeq ($(HOST_OS),windows)
@@ -63,6 +52,13 @@ LOCAL_COPY_HEADERS := $(common_COPY_HEADERS)
 
 include $(BUILD_HOST_STATIC_LIBRARY)
 
+ifeq ($(ARCH_ARM_HAVE_NEON),true)
+	common_CFLAGS += -DPNG_ARM_NEON_OPT=2
+	common_SRC_FILES += \
+		arm/arm_init.c \
+		arm/filter_neon.S \
+		arm/filter_neon_intrinsics.c
+endif
 
 # For the device (static)
 # =====================================================
